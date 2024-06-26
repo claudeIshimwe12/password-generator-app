@@ -132,7 +132,7 @@ body {
   height: 20px;
   width: 20px;
   background: var(--semi-dark-black);
-  border: 3px solid var(--green);
+  border: 3px solid var(--almost-white);
   border-radius: 0px;
 }
 .control:hover input ~ .control_indicator,
@@ -142,6 +142,7 @@ body {
 
 .control input:checked ~ .control_indicator {
   background: var(--green);
+  border: 3px solid var(--green);
 }
 
 .control_indicator:after {
@@ -192,13 +193,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: auto 1rem;
+  margin: 0 0 0 1rem;
 }
 .bar {
   width: 10px;
   height: 28px;
   border: 1px solid var(--almost-white);
-  margin: auto 0.1rem;
+  margin: 0 0 0 0.1rem;
 }
 
 /*====================== Generate Button Styles    ==================== */
@@ -224,5 +225,119 @@ body {
   color: var(--green);
   font-weight: 600;
 }
-
 /*====================== Mobile Responsiveness ==================== */
+@media screen and (max-width: 480px) {
+  .wrapper {
+    width: 80%;
+    padding: 0.2rem;
+    margin: 0.2rem;
+  }
+  .strength {
+    padding: 0.4rem;
+    margin: 0.2rem auto;
+  }
+  .form-wrapper {
+    padding: 1rem 1rem;
+  }
+  .title {
+    font-size: 16px;
+  }
+  .password-holder {
+    margin: 1rem auto;
+    padding: 0.5rem 2rem;
+  }
+  .password {
+    font-size: 24px;
+  }
+  .char-length-label {
+    font-size: 16px;
+  }
+  .char-length-number {
+    font-size: 24px;
+  }
+  .control {
+    font-size: 16px;
+  }
+  .strength {
+    margin: 1rem auto;
+    padding: 0.4rem 0 0.4rem 0.8rem;
+  }
+  .str {
+    font-size: 16px;
+  }
+  .strength-indicator .med {
+    font-size: 18px;
+  }
+  .strength-bars {
+    margin: auto 0.5rem;
+  }
+  .bar {
+    width: 8px;
+    height: 28px;
+    border: 1px solid var(--almost-white);
+    margin: auto 0.09rem;
+  }
+  .password-holder {
+    margin: 1rem auto;
+    padding: 0.5rem 1rem;
+  }
+  .password {
+    font-size: 16px;
+    padding-top: 0.4rem;
+  }
+}
+
+/*====================== Strength Styles ========================= */
+.too-weak .bar-1 {
+  background-color: var(--red);
+  border: var(--red);
+}
+.weak .bar-1,
+.weak .bar-2 {
+  background-color: var(--orange);
+  border: var(--orange);
+}
+.medium .bar-1,
+.medium .bar-2,
+.medium .bar-3 {
+  background-color: var(--yellow);
+  border: var(--yellow);
+}
+.strong .bar-1,
+.strong .bar-2,
+.strong .bar-3,
+.strong .bar-4 {
+  background-color: var(--green);
+  border: var(--green);
+}
+/*====================== Table Responsiveness ==================== */
+@media screen and (min-width: 480px) and (max-width: 834px) {
+  .wrapper {
+    width: 74%;
+  }
+  .form-wrapper {
+    padding: 2rem 2.4rem;
+  }
+  .password-holder {
+    margin: 1.4rem auto;
+    padding: 0.5rem 2.4rem;
+  }
+  .strength-indicator .med {
+    font-size: 14px;
+  }
+}
+
+/*====================== Laptop Responsiveness ==================== */
+@media screen and (min-width: 834px) and (max-width: 1440px) {
+  .wrapper {
+    width: 44%;
+  }
+  .container {
+    width: 100%;
+  }
+  .form-wrapper {
+    background-color: var(--semi-dark-black);
+
+    padding: 2rem 2ch;
+  }
+}
