@@ -66,6 +66,16 @@ body {
   font-size: 24px;
 }
 /* Copy Button Styles */
+.copy-btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.copy-btn-wrapper h1 {
+  font-size: 24px;
+  margin-right: 1rem;
+  color: var(--green);
+}
 .copy-btn {
   background-color: transparent;
   border: none;
@@ -285,6 +295,10 @@ body {
     font-size: 16px;
     padding-top: 0.4rem;
   }
+  .copy-btn-wrapper h1 {
+    font-size: 16px;
+    margin-right: 0.5rem;
+  }
 }
 
 /*====================== Strength Styles ========================= */
@@ -340,4 +354,7 @@ body {
 
     padding: 2rem 2ch;
   }
+}
+.hidden {
+  opacity: 0;
 }

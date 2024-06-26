@@ -93,6 +93,9 @@ generateButton.addEventListener("click", function () {
   document.querySelector(".med").textContent =
     strength === "too-weak" ? "TOO WEAK" : strength.toUpperCase();
   strengIndicator.classList.add(strength);
+  document.querySelector(".copy-btn").addEventListener("click", function () {
+    copyContent(password);
+  });
 });
 function checkPasswordStrength(
   password,
@@ -131,5 +134,15 @@ function checkPasswordStrength(
       return "strong";
     default:
       return "Unknown";
+  }
+}
+
+// Copy to clipboard
+async function copyContent(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    document.querySelector(".copy-btn-wrapper h1").classList.remove("hidden");
+  } catch (err) {
+    console.error("Failed to copy: ", err);
   }
 }
