@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #18171f;
+  --semi-dark-black: #24232c;
+  --grey: #817d92;
+  --almost-white: #e6e5ea;
+  --green: #a4ffaf;
+  --red: #f64a4a;
+  --orange: #fb7c58;
+  --yellow: #f8cd65;
+}
+body {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+.wrapper {
+  width: 37.5%;
+}
+.container {
+  width: 100%;
+}
+.form-wrapper {
+  background-color: var(--semi-dark-black);
+
+  padding: 2rem 3.5rem;
+}
+.title {
+  text-align: center;
+  color: var(--grey);
+  font-size: 24px;
+}
+.password-holder {
+  background-color: var(--semi-dark-black);
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem auto;
+  padding: 1rem 3.5rem;
+}
+.password {
+  color: var(--grey);
+}
+.char-length-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.char-length-label {
+  color: var(--almost-white);
+  font-size: 24px;
+}
+.char-length-number {
+  color: var(--green);
+  font-size: 24px;
+}
+/* Copy Button Styles */
+.copy-btn {
+  background-color: transparent;
+  border: none;
+}
+/* Input range styles */
+.password-range {
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--green) 40%, var(--black) 40%);
+  cursor: pointer;
+  margin: 2rem auto;
+}
+
+/* Thumb: for Chrome, Safari, Edge */
+.password-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50px;
+  background: var(--almost-white);
+  transition: all 500ms ease;
+}
+
+.password-range::-webkit-slider-thumb:hover {
+  background-color: var(--black);
+  border: 1.2px solid var(--green);
+}
+
+/* Thumb: for Firefox */
+.password-range::-moz-range-thumb {
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50px;
+  background: var(--green);
+}
+
+/* Check boxes Styels */
+
+.control {
+  font-family: arial;
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 5px;
+  padding-top: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--almost-white);
+  font-size: 18px;
+}
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.control_indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: var(--semi-dark-black);
+  border: 3px solid var(--green);
+  border-radius: 0px;
+}
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+  background: var(--green);
+}
+
+.control input:checked ~ .control_indicator {
+  background: var(--green);
+}
+
+.control_indicator:after {
+  box-sizing: unset;
+  content: "";
+  position: absolute;
+  display: none;
+}
+.control input:checked ~ .control_indicator:after {
+  display: block;
+}
+.control-checkbox .control_indicator:after {
+  left: 4px;
+  top: 0px;
+  width: 4px;
+  height: 8px;
+  border: solid #000000;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* ------------------------------Strength ------------------------------- */
+.strength {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.6rem;
+  background-color: var(--black);
+  margin: 2rem auto;
+}
+.strength-indicator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.strength .str {
+  font-size: 18px;
+  color: var(--almost-white);
+  font-weight: 300;
+  opacity: 0.6;
+}
+.strength .med {
+  font-size: 24px;
+  color: var(--almost-white);
+}
+
+.strength-bars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 1rem;
+}
+.bar {
+  width: 10px;
+  height: 28px;
+  border: 1px solid var(--almost-white);
+  margin: auto 0.1rem;
+}
+
+/*====================== Generate Button Styles    ==================== */
+.generate-btn {
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: var(--green);
+  height: 56px;
+  border: none;
+  color: var(--black);
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 500ms ease;
+}
+.generate-btn .right-arrow svg {
+  margin-left: 1rem;
+  padding-top: 0.4rem;
+}
+
+.generate-btn:hover {
+  background-color: var(--semi-dark-black);
+  border: 2.4px solid var(--green);
+  color: var(--green);
+  font-weight: 600;
+}
+
+/*====================== Mobile Responsiveness ==================== */

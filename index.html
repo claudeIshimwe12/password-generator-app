@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Password generator app</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <h1 class="title">Password Generator</h1>
+        <div class="password-holder">
+          <h1 class="password">P4$5W0rD!</h1>
+          <button class="copy-btn">
+            <img src="./assets//images/icon-copy.svg" alt="" srcset="" />
+          </button>
+        </div>
+        <div class="form-wrapper">
+          <div class="char-length-wrapper">
+            <h1 class="char-length-label">Character Length</h1>
+            <h1 class="char-length-number">10</h1>
+          </div>
+          <input
+            type="range"
+            name="range"
+            value="8"
+            min="0"
+            max="20"
+            id="password-range"
+            class="password-range"
+          /><br />
+          <!----------------------------- Check Boxes ---------------------------->
+          <div class="control-group">
+            <label class="control control-checkbox">
+              Include Uppercase Letters
+              <input type="checkbox" checked="checked" />
+              <div class="control_indicator"></div>
+            </label>
+            <label class="control control-checkbox">
+              Include Lowercase Letters
+              <input type="checkbox" />
+              <div class="control_indicator"></div>
+            </label>
+            <label class="control control-checkbox">
+              Include Numbers
+              <input type="checkbox" />
+              <div class="control_indicator"></div>
+            </label>
+            <label class="control control-checkbox">
+              Include Symbols
+              <input type="checkbox" />
+              <div class="control_indicator"></div>
+            </label>
+          </div>
+
+          <!----------------------------- Strength Indicators ---------------------------->
+          <div class="strength">
+            <h1 class="str">Strength</h1>
+            <div class="strength-indicator">
+              <h1 class="med">MEDIUM</h1>
+              <div class="strength-bars">
+                <div class="bar bar-1"></div>
+                <div class="bar bar-2"></div>
+                <div class="bar bar-3"></div>
+                <div class="bar bar-4"></div>
+              </div>
+            </div>
+          </div>
+          <button class="generate-btn" onmouseover="changeIcon()" onmouseout="changeIconAgain()">
+            Generate
+            <span class="right-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6" d="M5 12h14m-7-7l7 7l-7 7"/></svg>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
