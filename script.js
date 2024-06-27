@@ -95,6 +95,9 @@ generateButton.addEventListener("click", function () {
   strengIndicator.classList.add(strength);
   document.querySelector(".copy-btn").addEventListener("click", function () {
     copyContent(password);
+    setTimeout(() => {
+      document.querySelector(".hide-btn").classList.add("hidden");
+    }, 2000);
   });
 });
 function checkPasswordStrength(
